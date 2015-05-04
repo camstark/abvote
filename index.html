@@ -160,6 +160,14 @@ var hex = svg.selectAll(".hexagon")
         return ''; //'#fff';
        })
        
+       .attr("ednum", function (d, i) {
+        if (i<mapdata.length) {
+          electorate = electorates.results[mapdata[i]];
+          return electorate.map_id;
+        }
+        return ''; //'#fff';
+       })
+       
       .attr("e2012", function (d, i) {
         if (i<mapdata.length) {
           electorate = electorates.results[mapdata[i]];
@@ -191,7 +199,7 @@ function mover(d) {
 		.style("fill-opacity", 0.3)
 		;
   var tt = d3.select(placeholderInfo)
-          .html('Electoral District: ' + $(this).attr('edname') + '<br/>'
+          .html('Electoral District: ' + $(this).attr('edname') + ' (' + $(this).attr('ednum') + ')<br/>'
           	+ '2012 Winner: ' + $(this).attr('e2012') + '<br/>'
           	+ 'Incumbent: ' + $(this).attr('incumb')) 
 
