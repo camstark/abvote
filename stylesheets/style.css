@@ -1,0 +1,28 @@
+html, body, .h1 {
+    font: 10px Verdana, Helvetica, sans-serif;
+}
+
+.hexagon {
+  fill: none;
+  stroke: #000;
+  stroke-width: .5px;
+}
+
+.hex-wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding:0;
+  margin:0;
+}
+
+.hex-label {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  color: white;
+  font-size: 12px;
+  font-family: sans-serif;
+  text-align: center;
+}
