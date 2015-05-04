@@ -192,7 +192,7 @@ function mover(d) {
 		;
   var tt = d3.select(placeholderInfo)
     .html(function(d) {
-        if ($(this).attr('edname') != ''){
+        if ($(this).attr('edname').length > 0){
         	return 
 		  $(this).attr('edname') + '<br/>'
 		  + '2012 Winner: ' + $(this).attr('e2012') + '<br/>'
