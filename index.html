@@ -191,9 +191,12 @@ function mover(d) {
 		.style("fill-opacity", 0.3)
 		;
   var tt = d3.select(placeholderInfo)
-	.text($(this).attr('edname'))
-	.text($(this).attr('e2012'))
-	.text($(this).attr('incumb'))
+    .html($(this).attr('edname') + '<br/>'
+          + '2012 Winner: ' + $(this).attr('e2012') + '<br/>'
+          + 'Incumbent: ' + $(this).attr('incumb')) 
+//	.text($(this).attr('edname'))
+//	.text($(this).attr('e2012'))
+//	.text($(this).attr('incumb'))
 	;
 };
 
