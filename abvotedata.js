@@ -92,5 +92,5 @@ var electorates = {
 
   },
   
-  "max_turnout": "39816" //34552
+  "max_turnout": "36000" //34552
 }
