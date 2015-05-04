@@ -202,7 +202,7 @@ function mover(d) {
         //  .html('Electoral District: ' + $(this).attr('edname') + ' (' + $(this).attr('ednum') + ')<br/>'
         //  	+ '2012 Winner: ' + $(this).attr('e2012') + '<br/>'
         //  	+ 'Incumbent: ' + $(this).attr('incumb')) 
-          .html($(this).attr('edname') == "" ? 'Electoral District: ' + $(this).attr('edname') + ' (' + $(this).attr('ednum') + ')<br/>'
+          .html($(this).attr('edname') != "" ? 'Electoral District: ' + $(this).attr('edname') + ' (' + $(this).attr('ednum') + ')<br/>'
           	+ '2012 Winner: ' + $(this).attr('e2012') + '<br/>'
           	+ 'Incumbent: ' + $(this).attr('incumb')
           	: "none")
