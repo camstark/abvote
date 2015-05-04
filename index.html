@@ -177,9 +177,13 @@ function mover(d) {
 		.style("fill-opacity", 0.3)
 		;
   var tt = d3.select(placeholderInfo)
-	.text($(this).attr('edname'));
-
-}
+	//.text($(this).attr('edname'));
+	.text(
+        if ($(this).attr('edname').length > 0) {
+          return $(this).attr('edname');
+        }
+        return 'Hover over a riding for more detail';
+};
 
 //Mouseout function
 function mout(d) { 
