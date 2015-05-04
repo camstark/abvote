@@ -182,7 +182,15 @@ var hex = svg.selectAll(".hexagon")
           return electorate.current_party;
         }
         return ''; //'#fff';
-       })        
+       })  
+       
+      .attr("maj2012", function (d, i) {
+        if (i<mapdata.length) {
+          electorate = electorates.results[mapdata[i]];
+          return electorate.maj2012;
+        }
+        return ''; //'#fff';
+       }) 
        
 	.on("mouseover", mover)   //Mouseover Function
 	.on("mouseout", mout);    //Mouseout Function
@@ -203,7 +211,7 @@ function mover(d) {
         //  	+ '2012 Winner: ' + $(this).attr('e2012') + '<br/>'
         //  	+ 'Incumbent: ' + $(this).attr('incumb')) 
           .html($(this).attr('edname') != "" ? 'Electoral District: ' + $(this).attr('edname') + ' (' + $(this).attr('ednum') + ')<br/>'
-          	+ '2012 Winner: ' + $(this).attr('e2012') + '<br/>'
+          	+ '2012 Winner: ' + $(this).attr('e2012') + ' (' + $(this).attr('maj2012') + ')<br/>'
           	+ 'Incumbent: ' + $(this).attr('incumb')
           	: '<br/><br/><br/>')
 
