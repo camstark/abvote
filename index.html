@@ -176,7 +176,7 @@ var hex = svg.selectAll(".hexagon")
         return ''; //'#fff';
        })        
        
-	.on("mouseover",, function (d, i) {
+	.on("mouseover", function (d, i) {
 	        if (i<mapdata.length) {
 	          electorate = electorates.results[mapdata[i]];
 	          return mover;
