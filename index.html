@@ -146,6 +146,17 @@ var hex = svg.selectAll(".hexagon")
         }
         return 'none'; //'#fff';
        })
+       
+      .attr("edname", function (d, i) {
+        if (i<mapdata.length) {
+          electorate = electorates.results[mapdata[i]];
+          return electorate.edname;
+//          electorate = electorates.results[mapdata[i]];
+//          return regionColors[electorate.region];
+        }
+        return 'none'; //'#fff';
+       })       
+       
 	.on("mouseover", mover)   //Mouseover Function
 	.on("mouseout", mout);    //Mouseout Function
 
