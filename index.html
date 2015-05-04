@@ -192,7 +192,7 @@ function mover(d) {
 		.style("fill-opacity", 0.3)
 		;
   var tt = d3.select(info)
-	.text($(this).attr('edname'));
+	.text('<h4 id="edcontent">' + $(this).attr('edname') + '</h4>');
 
 }
 
@@ -203,8 +203,8 @@ function mout(d) {
 	   .duration(1000)
 	   .style("fill-opacity", 1)
 	   ;
-  var tt = d3.select(info)
-	.text('Hover over a riding for more detail');
+  //var tt = d3.select(info)
+  //	.text('Hover over a riding for more detail');
 };
 
 /////Labelling
