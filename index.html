@@ -191,7 +191,7 @@ function mover(d) {
 		.duration(10)		  
 		.style("fill-opacity", 0.3)
 		;
-  function() {
+  var tt = function() {
 	$('#placeholderInfo').remove();
 	$('#info').append('<h4 id="edcontent"></h4>');
 	$('#edcontent').text($(this).attr('edname'));
