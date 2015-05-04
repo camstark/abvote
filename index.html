@@ -191,9 +191,8 @@ function mover(d) {
 		.style("fill-opacity", 0.3)
 		;
   var tt = d3.select(placeholderInfo)
-    .append($(this).attr('edname'))
-    .html($(this).attr('e2012'))
-    .append($(this).attr('incumb'))
+    .text($(this).attr('edname') + '<br />' + $(this).attr('e2012'))
+    //.append($(this).attr('incumb'))
 
 //	.text($(this).attr('edname'))
 //	.text($(this).attr('e2012'))
