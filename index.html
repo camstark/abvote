@@ -16,21 +16,6 @@
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="abvotedata.js"></script>
 
-<script>
-	$('.hexagon').hover(
-	
-		function() {
-			$('#placeholderInfo').remove();
-			$('#info').append('<h4 id="edcontent"></h4>');
-			$('#edcontent').text($(this).attr('edname'));
-		},
-		
-		function() {
-			$('#edcontent').remove();
-			$('#info').append('<h4 id="placeholderInfo">Hover over a riding for more detail</h4>');
-		}
-	);
-</script>
 
 <script>
 
@@ -191,8 +176,8 @@ function mover(d) {
 		.duration(10)		  
 		.style("fill-opacity", 0.3)
 		;
-  var tt = d3.select(info)
-	.text('<h4 id="edcontent">' + $(this).attr('edname') + '</h4>');
+  var tt = d3.select(placeholderInfo)
+	.text($(this).attr('edname'));
 
 }
 
