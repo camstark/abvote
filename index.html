@@ -195,7 +195,7 @@ function mout(d) {
 
 var myMouseMoveFunction = function() {
 	// save selection of infobox so that we can later change it's position
-	var infobox = d3.select(".infobox");
+	var infobox = d3.select(".info");
 	// this returns x,y coordinates of the mouse in relation to our svg canvas
 	var coord = d3.svg.mouse(this)
 	// now we just position the infobox roughly where our mouse is
