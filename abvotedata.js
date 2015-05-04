@@ -83,7 +83,7 @@ var electorates = {
 "80": {"map_id": "80","edname": "St. Albert","region": "Edmonton","election_2012": "PC","current_party": "PC","totalvoters": "32000", "maj2012":"53.7%"},
 "81": {"map_id": "81","edname": "Stony Plain","region": "Rest of Alberta","election_2012": "PC","current_party": "PC","totalvoters": "29383", "maj2012":"45.2%"},
 "82": {"map_id": "82","edname": "Strathcona-Sherwood Park","region": "Rest of Alberta","election_2012": "PC","current_party": "PC","totalvoters": "31609", "maj2012":"50.7%"},
-"83": {"map_id": "83","edname": "Strathmore-Brooks","region": "Rest of Alberta","election_2012": "WRP","current_party": "PC","totalvoters": "27363",55.6%},
+"83": {"map_id": "83","edname": "Strathmore-Brooks","region": "Rest of Alberta","election_2012": "WRP","current_party": "PC","totalvoters": "27363", "maj2012": "55.6%"},
 "84": {"map_id": "84","edname": "Vermilion-Lloydminster","region": "Rest of Alberta","election_2012": "PC","current_party": "PC","totalvoters": "23577", "maj2012":"51.9%"},
 "85": {"map_id": "85","edname": "West Yellowhead","region": "Rest of Alberta","election_2012": "PC","current_party": "PC","totalvoters": "20323", "maj2012":"44.6%"},
 "86": {"map_id": "86","edname": "Wetaskiwin-Camrose","region": "Rest of Alberta","election_2012": "PC","current_party": "PC","totalvoters": "27129", "maj2012":"52.3%"},
