@@ -103,8 +103,7 @@ var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-    .on('mousemove', myMouseMoveFunction);
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 //Set the hexagon radius
 var hexbin = d3.hexbin()
@@ -160,7 +159,7 @@ var hex = svg.selectAll(".hexagon")
 //          electorate = electorates.results[mapdata[i]];
 //          return regionColors[electorate.region];
         }
-        return 'none'; //'#fff';
+        return ''; //'#fff';
        })       
        
 	.on("mouseover", mover)   //Mouseover Function
@@ -193,15 +192,6 @@ function mout(d) {
   //	.text('Hover over a riding for more detail');
 };
 
-var myMouseMoveFunction = function() {
-	// save selection of infobox so that we can later change it's position
-	var infobox = d3.select(".info");
-	// this returns x,y coordinates of the mouse in relation to our svg canvas
-	var coord = d3.svg.mouse(this)
-	// now we just position the infobox roughly where our mouse is
-	infobox.style("left", coord[0] + 15  + "px" );
-	infobox.style("top", coord[1] + "px");
-}
 
 /////Labelling
 	  
