@@ -178,11 +178,12 @@ function mover(d) {
 		;
   var tt = d3.select(placeholderInfo)
 	//.text($(this).attr('edname'));
-	.text(
+	.text( function() {
         if ($(this).attr('edname').length > 0) {
           return $(this).attr('edname');
         }
         return 'Hover over a riding for more detail';
+	});
 };
 
 //Mouseout function
