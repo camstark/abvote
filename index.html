@@ -176,7 +176,14 @@ var hex = svg.selectAll(".hexagon")
         return ''; //'#fff';
        })        
        
-	.on("mouseover", mover)   //Mouseover Function
+	.on("mouseover",, function (d, i) {
+	        if (i<mapdata.length) {
+	          electorate = electorates.results[mapdata[i]];
+	          return mover;
+	        }
+	        return '';
+	       })
+	       //mover)   //Mouseover Function
 	.on("mouseout", mout);    //Mouseout Function
 
 ///////////////////////////////////////////////////////////////////////////
@@ -214,8 +221,9 @@ function mout(d) {
 	   .duration(1000)
 	   .style("fill-opacity", 1)
 	   ;
-  //var tt = d3.select(info)
-  //	.text('Hover over a riding for more detail');
+  var ot = d3.select(info)
+  	//.text('Hover over a riding for more detail');
+        .html('<br/>' + '<br/>' + <br/>); 
 };
 
 
