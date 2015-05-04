@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<title>2012 Alberta Election Hexmap</title>
+<title>2012 Alberta Election Results Hexmap</title>
 <head>
 	<link rel="stylesheet" href="stylesheets/style.css" />
 </head>
 
 <body>
-<div><h1>2012 Alberta Election Hexmap</h1></div>
+<div><h1>2012 Alberta Election Results Hexmap</h1></div>
 
 	<div class="info" id="info">
 		<h4 id="placeholderInfo">Hover over a riding for more detail</h4>
@@ -199,9 +199,13 @@ function mover(d) {
 		.style("fill-opacity", 0.3)
 		;
   var tt = d3.select(placeholderInfo)
-          .html('Electoral District: ' + $(this).attr('edname') + ' (' + $(this).attr('ednum') + ')<br/>'
+        //  .html('Electoral District: ' + $(this).attr('edname') + ' (' + $(this).attr('ednum') + ')<br/>'
+        //  	+ '2012 Winner: ' + $(this).attr('e2012') + '<br/>'
+        //  	+ 'Incumbent: ' + $(this).attr('incumb')) 
+          .html($(this).attr('edname') == "" ? 'Electoral District: ' + $(this).attr('edname') + ' (' + $(this).attr('ednum') + ')<br/>'
           	+ '2012 Winner: ' + $(this).attr('e2012') + '<br/>'
-          	+ 'Incumbent: ' + $(this).attr('incumb')) 
+          	+ 'Incumbent: ' + $(this).attr('incumb')
+          	: "none")
 
 //	.text($(this).attr('edname'))
 //	.text($(this).attr('e2012'))
