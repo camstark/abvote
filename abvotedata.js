@@ -1,6 +1,6 @@
 var electorates = {
   "results": {
-"..": {"edname": "","region": "","election_2012": "","current_party": ""}, 
+"..": {"map_id": "", "edname": "","region": "","election_2012": "","current_party": ""}, 
 "01": {"map_id": "1","edname": "Dunvegan-Central Peace-Notley","region": "Rest of Alberta","election_2012": "PC","current_party": "PC","totalvotes": "15000"},
 "02": {"map_id": "2","edname": "Lesser Slave Lake","region": "Rest of Alberta","election_2012": "PC","current_party": "PC","totalvotes": "15000"},
 "03": {"map_id": "3","edname": "Calgary-Acadia","region": "Calgary","election_2012": "PC","current_party": "PC","totalvotes": "15000"},
