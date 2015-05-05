@@ -79,17 +79,7 @@ d3.selectAll("#metrics li")
 					return 'none'; //'#fff';
 				   })
 				   
-			svg.selectAll(".hex-label")
-				.html(function(d, i) {
-				        if (i<mapdata.length) {
-				          electorate = electorates.results[mapdata[i]];
-					  increment = i;
-				          if (electorate.party == '') {return '';};
-	
-				          return electorate.map_id + '<br/>'
-				            + '<small>' + electorate.election_2012 + '<small>';
-				        }
-				      };	   
+	   
 		}
 
 		if (item.classed("region")) {
