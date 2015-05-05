@@ -105,9 +105,10 @@ d3.selectAll("#metrics li")
 					if (i<mapdata.length) {
 					electorate = electorates.results[mapdata[i]];
 					return regionColors[electorate.region];
-			}
-			return 'none'; //'#fff';
-		   });
+					}
+					return 'none'; //'#fff';
+		   		  })
+		   		  
 		}
 		
 		if (item.classed("current_party")) {
