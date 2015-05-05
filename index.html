@@ -8,8 +8,21 @@
 
 	<div class="info" id="info">
 		<h4 id="placeholderInfo">
-			2012 Alberta Election Results Hexmap<br/><div class="subinfo">Hover over a riding for more detail</div><br/></h4>
+			Alberta Election Results Hexmap<br/><div class="subinfo">Hover over a riding for more detail</div><br/></h4>
 	</div>
+
+<div id="metrics">
+    <div id="eddata">
+        <!-- <h3>Data</h3> -->
+        <ul>
+        <li data-metric="region" class="selected region">Regions</li>		
+        <li data-metric="election_2012" class=" election_2012">2012 Results</li>
+        <!--<li data-metric="proj_2015" class="selected proj_2015">2015 Projection</li>-->
+        <li data-metric="result_2015" class=" result_2015">2015 Results</li>
+        </ul>
+    </div>  
+   <!--  <div class="clr"></div> -->
+</div><!-- @end #metrics --> 	
 	
 	<div class="hexmap"></div>
 
@@ -46,6 +59,45 @@ var mapdata = [
     
 ];
 
+
+d3.selectAll("#metrics li")
+    .on("click", function() {
+        var item = d3.select(this);
+		
+		if (item.classed("election_2012")) {
+
+			$("#metrics li").removeClass("selected");
+
+			item.attr("class","election_2012 selected");
+		
+			svg.selectAll(".hexagon")
+				  .style("fill", function (d, i) {
+					if (i<mapdata.length) {
+					electorate = electorates.results[mapdata[i]];
+					return partyColors[electorate.election_2012];
+			}
+			return 'none'; //'#fff';
+		   })
+		}
+
+		if (item.classed("region")) {
+		
+			$("#metrics li").removeClass("selected");
+
+			item.attr("class", "region selected");
+			
+			svg.selectAll(".hexagon")
+				  .style("fill", function (d, i) {
+					if (i<mapdata.length) {
+					electorate = electorates.results[mapdata[i]];
+					return regionColors[electorate.region];
+			}
+			return 'none'; //'#fff';
+		   })
+		}
+    });
+
+
 var partyColors = {
     '': 'rgba(250,250,250,.1)', //'none', //'#fff',
     'PC': '#377eb8',
@@ -57,14 +109,14 @@ var partyColors = {
 
 var regionColors = {
     '': '#fff',
-    'Calgary': '#de2d26',
-    'Edmonton': '#FF8500',
-    'Rest of Alberta': '#2ca25f',//'#FF8500',
+    'Calgary': '#bc1c38',
+    'Edmonton': '#2E80B6', 
+    'Rest of Alberta': 'rgb(254,186,53)', 
 };
 
 //svg sizes and margins
 var margin = {
-    top: 0, //27,
+    top: -10, //27,
     right: 0,
     bottom: 0,
     left: 0
@@ -130,16 +182,18 @@ var hex = svg.selectAll(".hexagon")
         return hexbin.hexagon(radius(35000));
       })
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
-      .style("stroke", function (d, i) {
-        if (i<mapdata.length) {
-          electorate = electorates.results[mapdata[i]];
-//          if (electorate.region != '') {
-//            return regionColors[electorate.region];          };
-			if (electorate.election_2012 != '') {
-			  return partyColors[electorate.election_2012];          };
-        }
-        return 'none';
-       })
+
+	  .style("stroke", "none")
+//      .style("stroke", function (d, i) {
+//        if (i<mapdata.length) {
+//          electorate = electorates.results[mapdata[i]];
+////          if (electorate.region != '') {
+////            return regionColors[electorate.region];          };
+//			if (electorate.election_2012 != '') {
+//			  return partyColors[electorate.election_2012];          };
+//       }
+//      return 'none';
+//       })
 	   
       //.style("stroke-width", "1px")
 
@@ -154,10 +208,10 @@ var hex = svg.selectAll(".hexagon")
 
       .style("fill", function (d, i) {
         if (i<mapdata.length) {
-          electorate = electorates.results[mapdata[i]];
-          return partyColors[electorate.election_2012];
 //          electorate = electorates.results[mapdata[i]];
-//          return regionColors[electorate.region];
+//          return partyColors[electorate.election_2012];
+          electorate = electorates.results[mapdata[i]];
+          return regionColors[electorate.region];
         }
         return 'none'; //'#fff';
        })
@@ -230,7 +284,7 @@ function mover(d) {
           .html($(this).attr('edname') != "" ? $(this).attr('edname') + ' (' + $(this).attr('ednum') + ')<br/>'
           	+ '<div class="subinfo">2012 Winner: ' + $(this).attr('e2012') + ' (' + $(this).attr('maj2012') + ')<br/>'
           	+ 'Incumbent: ' + $(this).attr('incumb') + '</div>'
-          	: '2012 Alberta Election Results Hexmap<br/><div class="subinfo">Hover over a riding for more detail</div><br/>')
+          	: 'Alberta Election Results Hexmap<br/><div class="subinfo">Hover over a riding for more detail</div><br/>')
 
 //	.text($(this).attr('edname'))
 //	.text($(this).attr('e2012'))

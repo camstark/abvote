@@ -47,3 +47,39 @@ html, body, .h1 {
 .subinfo {
 	font-weight: normal;
 }
+
+#metrics { width: 920px; margin: 0 auto 15px 0; font-family: Helvetica, sans-serif; }
+#metrics #instruct { 
+    text-align: left; 
+    margin-bottom: 10px;
+    margin-right: 20px; 
+    float: left; 
+    width: 210px; 
+    font-size: 14px; 
+    line-height: 1.4em;
+    font-family: Georgia, serif;
+}
+#metrics h3 { font-size: 13px; font-family: Helvetica, sans-serif; text-align: center; margin-bottom: 0; }
+#metrics ul { font-size: 12px; font-family: Helvetica, sans-serif; margin-left: 0; padding: 0; }
+#metrics ul li { 
+    list-style: none; 
+    /*margin: 10px 10px 0 0; */
+    padding: 4px 0; 
+    display: inline-block;
+    width: 108px;
+    /*background: #e0e0e0;*/
+    cursor: pointer;
+    text-align: center;
+    font-size: 11px;
+    border: 1px solid #e0e0e0;
+}
+#metrics ul li.bottom { margin-bottom: 0; }
+#metrics #data { width: 475px; float: left; border-right: 1px solid #ccc; margin-right: 15px; }
+
+#metrics .block-button { width: 80px; display: block; float:left; clear:both; }
+
+#metrics .selected { color: white; background: #e0e0e0;}
+
+.button { fill: #000; }
+
+.clr { clear: both; }
