@@ -18,7 +18,7 @@
         <ul>
         <li data-metric="region" class="selected region">Regions</li>		
         <li data-metric="election_2012" class=" election_2012">2012 Results</li>
-        <li data-metric="current_party" class=" current_party">Current Party</li>
+        <li data-metric="current_party" class=" current_party">Before Election</li>
         <li data-metric="result_2015" class=" result_2015">2015 Results</li>
         </ul>
     </div>  
@@ -26,6 +26,7 @@
 </div><!-- @end #metrics --> 	
 	
 	<div class="hexmap"></div>
+	
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/d3.hexbin.v0.min.js?5c6e4f0"></script>
@@ -174,6 +175,19 @@ d3.selectAll("#metrics li")
 					}
 					return 'none'; //'#fff';
 		   		  })
+//				  .style("fill-opacity", function (d,i) {
+//					if (i>=mapdata.length) {return 1;};
+//					electorate = electorates.results[mapdata[i]];
+//					if (electorate.party == '') {return 0;}
+//					per = electorate.maj2015.replace('%', '');
+//					per = parseFloat(per);
+//					//return per/85; //testing
+//					if (per > 60) {return 1;}
+//					else if (per > 50) {return 0.8;}
+//					else if (per > 40) {return 0.7}
+//					else if (per > 30) {return 0.6}
+//					else {return 0.5};
+//				  })
 		   		  
 			svg.selectAll(".hex-label")
 				.html(function(d, i) {
