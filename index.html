@@ -16,10 +16,10 @@
     <div id="eddata">
         <!-- <h3>Data</h3> -->
         <ul>
-        <li data-metric="region" class="selected region">Regions</li>		
+        <li data-metric="region" class=" region">Regions</li>		
         <li data-metric="election_2012" class=" election_2012">2012 Results</li>
         <li data-metric="current_party" class=" current_party">Before Election</li>
-        <li data-metric="result_2015" class=" result_2015">2015 Results</li>
+        <li data-metric="result_2015" class="selected result_2015">2015 Results</li>
         </ul>
     </div>  
    <!--  <div class="clr"></div> -->
@@ -320,7 +320,7 @@ var hex = svg.selectAll(".hexagon")
 //          electorate = electorates.results[mapdata[i]];
 //          return partyColors[electorate.election_2012];
           electorate = electorates.results[mapdata[i]];
-          return regionColors[electorate.region];
+          return regionColors[electorate.result_2015];
         }
         return 'none'; //'#fff';
        })
