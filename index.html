@@ -491,7 +491,7 @@ function mover(d) {
 					 
 					 //var pollresult = [$(this).attr('maj2012').replace('%',''), $(this).attr('maj2015').replace('%','')];
 					 
-					 var pollresult = [ {party:$(this).attr('e2012'),maj:$(this).attr('maj2012').replace('%',''),year:"2012"}, {party:$(this).attr('e2015'),maj:$(this).attr('maj2015').replace('%',''),year:"2015"} ];
+					 var pollresult = [{party:$(this).attr('e2015'),maj:$(this).attr('maj2015').replace('%',''),year:"2015",opacity:"1"},{party:$(this).attr('e2012'),maj:$(this).attr('maj2012').replace('%',''),year:"2012",opacity:"1"}];
 
 						var x = d3.scale.linear()
 							.domain([0, 100])
@@ -503,6 +503,7 @@ function mover(d) {
 						  .enter().append("div")
 							.style("width", function(d) { return x(d.maj) + "px"; })
 							.style("background-color", function (d) {return partyColors[d.party];})
+							.style("opacity", function (d) {return d.opacity})
 							.text(function(d) { return /*d.party + ' ' +*/ d.maj + '%'; })  ;						
 
 					 //d3.select(".chart")
