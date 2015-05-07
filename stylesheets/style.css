@@ -1,5 +1,6 @@
 html, body, .h1 {
     font: 8px Helvetica, sans-serif;
+	color: #676767;
 }
 
 .hexagon {
@@ -28,6 +29,10 @@ html, body, .h1 {
 }
 
 .info {
+
+/*CURRENTLY NOT SHOWING INFOBOX */
+	display: none;
+
 	padding: 6px 8px;
 	font: 14px/16px Helvetica, sans-serif;
 	background: white;
@@ -83,4 +88,49 @@ html, body, .h1 {
 .button { fill: #000; }
 
 .clr { clear: both; }
+
+div.tooltip {
+
+	padding: 6px 8px;
+	font: 14px/16px Helvetica, sans-serif;
+	background: white;
+	background: rgba(255,255,255,0.9);
+	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	border-radius: 5px;
+	max-width: 350px;
+	min-height: 50px;
+	
+    position: absolute;
+    text-align: left;
+    /*width: 170px;*/
+    pointer-events: none;
+    opacity: 0;
+}
+div.tooltip h3 { 
+  font-size: 12px; margin: 0 0 7px 0; 
+  line-height: 1.2em;
+}
+div.tooltip .line { clear: both; margin-top: 3px; font-size: 11px; }
+div.tooltip .symbol { float: left; width: 6px; height: 6px; margin: 3px 4px 0 0; }
+div.tooltip .val { float: right; width: 25px; text-align: right; margin-right: 4px; }
+div.tooltip .moe { float: right; color: #aaa; width: 30px; text-align: right; }
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+.chart p {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
 
