@@ -13,7 +13,7 @@ var electorates = {
 "10": {"map_id": "10","edname": "Calgary-Fish Creek","region": "Calgary","reg":"CGY","election_2012": "WRP","current_party": "WRP","totalvoters": "28329", "maj2012":"43.9%","result_2015":"PC","maj2015":"32.9%"},
 "11": {"map_id": "11","edname": "Calgary-Foothills","region": "Calgary","reg":"CGY","election_2012": "PC","current_party": "PC","totalvoters": "29218", "maj2012":"53.7%","result_2015":"PC","maj2015":"40.3%"},
 "12": {"map_id": "12","edname": "Calgary-Fort","region": "Calgary","reg":"CGY","election_2012": "PC","current_party": "PC","totalvoters": "26041", "maj2012":"40.9%","result_2015":"NDP","maj2015":"49.8%"},
-"13": {"map_id": "13","edname": "Calgary-Glenmore","region": "Calgary","reg":"CGY","election_2012": "PC","current_party": "PC","totalvoters": "33734", "maj2012":"47.9%","result_2015":"PC/NDP","maj2015":"33.2%"},
+"13": {"map_id": "13","edname": "Calgary-Glenmore","region": "Calgary","reg":"CGY","election_2012": "PC","current_party": "PC","totalvoters": "33734", "maj2012":"47.9%","result_2015":"PC/NDP","maj2015":"Tied 33.2%"},
 "14": {"map_id": "14","edname": "Calgary-Greenway","region": "Calgary","reg":"CGY","election_2012": "PC","current_party": "PC","totalvoters": "26186", "maj2012":"54.1%","result_2015":"PC","maj2015":"43%"},
 "15": {"map_id": "15","edname": "Calgary-Hawkwood","region": "Calgary","reg":"CGY","election_2012": "PC","current_party": "PC","totalvoters": "32848", "maj2012":"47.1%","result_2015":"NDP","maj2015":"36.3%"},
 "16": {"map_id": "16","edname": "Calgary-Hays","region": "Calgary","reg":"CGY","election_2012": "PC","current_party": "PC","totalvoters": "28097", "maj2012":"55.1%","result_2015":"PC","maj2015":"38.2%"},
